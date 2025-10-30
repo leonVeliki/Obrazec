@@ -1,108 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='ICON' href="favicon.ico" type="image/icon-x">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Prva stran</title>
 </head>
 
 
 <body>
-    <h1>Conference Call for Proposals</h1>
 
-    <hr>
+    <main class="page">
+            <!-- HERO (left column): logo + descriptive text -->
+            <div class="hero-inner">
+                <!-- logo image (use the supplied file in `slike/facebook.svg`) -->
+                <img src="slike/facebook.svg" alt="facebook logo" class="logo">
+                <!-- Short description shown under the logo -->
+                <p class="hero-text">Facebook ti pomaga ohranjati stike in deliti podatke z ljudmi iz tvojega življenja.</p>
+            </div>
 
-    <form>
-        <h4>Name</h4>
-        <input type="text" name="ime" style="width: 100px;"><input type="text" name="priimek"
-            style="width: 150px;"><br />
-        <p>first</p>
-        <p style="margin-left: 80px;">last</p>
-        <br />
-        <br />
+        <!-- LOGIN AREA (right column) -->
+        <div class="login-area">
+            <div class="login-card">
+                <form id="loginForm">
+                    <input id="email" name="email" type="email" placeholder="E-poštni naslov ali telefonska številka" required>
+                    <input id="password" name="password" type="password" placeholder="Geslo" required minlength="6">
+                    <button class="btn btn-primary" id="loginBtn" type="submit">Prijava</button>
+                    <div class="helper-row">
+                        <a href="#" class="forgot">Se ne spomniš gesla?</a>
+                    </div>
+                    <hr>
+                    <button type="button" class="btn btn-success" id="createBtn">Ustvari nov račun</button>
+                </form>
+            </div>
 
-        <h4>Job Title</h4>
-        <input type="text" name="job" style="width: 254px;"><br />
-        <br />
-        <h4>Company or Organizition's name</h4>
-        <input type="text" name="job" style="width: 500px;"><br />
-        <br /> 
+            <div class="create-note"> <strong>Ustvari stran</strong>za slavna osebnnost, blagovno znamko ali podjetje.</div>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-row footer-langs">Slovenščina English (US)  Shqip · Bosanski · Hrvatski · Srpski · Deutsch · Македонски · Italiano · Español · Português (Brasil) · +</div>
+            <div class="footer-row footer-links">
+                <a class="foot-item" href="#">Pridruži se</a>
+                <a class="foot-item" href="#">Prijava</a>
+                <a class="foot-item" href="#">Messenger</a>
+                <a class="foot-item" href="#">Facebook Lite</a>
+                <a class="foot-item" href="#">Video</a>
+                <a class="foot-item" href="#">Meta Pay</a>
+                <a class="foot-item" href="#">Trgovina Meta</a>
+                <a class="foot-item" href="#">Meta Quest</a>
+                <a class="foot-item" href="#">Ray-Ban Meta</a>
+                <a class="foot-item" href="#">Meta AI</a>
+                <a class="foot-item" href="#">Instagram</a>
+                <a class="foot-item" href="#">Niti</a>
+                <a class="foot-item" href="#">Volilno informacijsko središče</a>
+                <a class="foot-item" href="#">Pravilnik o zasebnosti</a>
+                <a class="foot-item" href="#">Središče za zasebnost</a>
+                <a class="foot-item" href="#">Nastavitve piškotkov</a>
+                <a class="foot-item" href="#">Pogoji uporabe</a>
+                <a class="foot-item" href="#">Pomoč</a>
+                <a class="foot-item" href="#">Ustvari oglas</a>
+                <a class="foot-item" href="#">Ustvari stran</a>
+                <a class="foot-item" href="#">Razvijalci</a>
+                <a class="foot-item" href="#">Zaposlitev</a>
+            </div>
+            <div class="copyright">Meta © 2025</div>
+        </div>
+    </footer>
 
-        <h4>Biography</h4>
-        <textarea name="biografija" rows="7" cols="70"></textarea><br />
-        <br />
-
-        <h4>Phone</h4>
-        <input type="text" name="telefon" style="width: 40px; height: 25px;">
-        <p> - </p>
-        <input type="text" name="telefon" style="width: 40px; height: 25px;">
-        <p> - </p>
-        <input type="text" name="telefon" style="width: 50px; height: 25px;">
-        <br />
-        <p style="margin-left: 10px;">&#35&#35&#35</p>
-        <p style="margin-left: 35px;">&#35&#35&#35</p>
-        <p style="margin-left: 35px;">&#35&#35&#35&#35</p>
-        <br />  
-        <br />
-
-        <h4>Email</h4>
-        <input type="text" name="email" style="width: 500px;"><br />
-        <br />
-
-        <h4>Proposal Titles</h4>
-        <input type="text" name="predlog" style="width: 500px;"><br />
-        <br />
-
-        <h4>short description</h4>
-        <textarea name="opis" rows="7" cols="70"></textarea><br />
-        <br />
-
-        <h4>Abstract</h4>
-        <textarea name="povzetek" rows="14" cols="70"></textarea><br />
-        <br />
-
-        <h4>Topics</h4>
-        <input type="checkbox" name="teme" value="1"> Topic the First<br />
-        <input type="checkbox" name="teme" value="2"> Topic the Second<br />
-        <input type="checkbox" name="teme" value="3"> Topic the Third<br />
-        <input type="checkbox" name="teme" value="4"> Topic the Fourth<br />
-        <input type="checkbox" name="teme" value="5"> Topic the Fifth<br />
-        <br />
-
-        <h4>Session Type</h4>
-        <select style="width: 200px;" name="vrsta">
-            <option value="1">Presentation</option>
-            <option value="2">Panel Discussion</option>
-            <option value="3">lala</option>
-            <option value="4">lolo</option>
-        </select>
-        <br />
-        <br />
-
-        <h4>Audience level</h4>
-        <select style="width: 200px;" name="poslušalci">
-            <option value="1">Novice</option>
-            <option value="2">Časopis</option>
-            <option value="3">Letalo</option>
-            <option value="4">Balon</option>
-        </select>
-        <br />
-        <br />
-
-        <h4>Vidoe url</h4>
-        <input type="text" name="video" style="width: 400px;"><br />
-        <p style="font-size: 13px;">If you have a video proposal, enter the URL.</p>
-        <br />
-        <br />
-
-        <h4>Additional Information</h4>
-        <textarea name="dodatno" rows="7" cols="70"></textarea><br />
-        <br />
-
-        <input type="submit" value="Submit Proposal" style="width: 150px; height: 30px;">
-
-    </form>
+    <script src="javaScript/script.js" defer></script>
 </body>
-
 </html>
