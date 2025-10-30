@@ -239,7 +239,7 @@ input[type="password"] {
 .footer-inner {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 4px 16px;
+    padding: 4px 0;
 }
 
 .footer-row {
@@ -252,22 +252,50 @@ input[type="password"] {
     text-align: left;
     font-size: 12px;
     color: var(--muted);
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e9e9ee;
+    padding-bottom: 0;
+    border-bottom: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-langs a {
+    color: #737373;
+    text-decoration: none;
+}
+
+.footer-langs a:hover {
+    text-decoration: underline;
+}
+
+.footer-langs .plus-btn {
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    padding: 0 8px;
+    font-weight: bold;
+    color: #4b4f56;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #dddfe2;
+    margin: 8px 0;
 }
 
 .footer-links {
-    text-align: center;
+    text-align: left;
     font-size: 12px;
     color: var(--muted);
     line-height: 1.4;
-    margin-top: 10px;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 .foot-item {
-    display: inline-block;
-    margin-right: 22px;
-    color: var(--muted);
+    color: #737373;
     text-decoration: none;
     cursor: pointer;
 }
@@ -277,10 +305,10 @@ input[type="password"] {
 }
 
 .copyright {
-    text-align: center;
+    text-align: left;
     color: var(--muted);
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 11px;
+    margin-top: 12px;
 }
 
 @media (max-width: 900px) {
